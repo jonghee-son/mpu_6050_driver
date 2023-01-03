@@ -1,0 +1,16 @@
+digraph G {
+"map" -> "scanmatcher_frame"[label="Broadcaster: /map_scanmatcher_broadcaster\nAverage rate: 49.363 Hz\nMost recent transform: 1672107341.784 ( -0.017 sec old)\nBuffer length: 5.004 sec\n"];
+"base_footprint" -> "laser_frame"[label="Broadcaster: /base_link_to_laser4\nAverage rate: 35.055 Hz\nMost recent transform: 1672107341.804 ( -0.037 sec old)\nBuffer length: 4.935 sec\n"];
+"nav" -> "base_footprint"[label="Broadcaster: /nav_basefootprint_broadcaster\nAverage rate: 76.307 Hz\nMost recent transform: 1672107341.769 ( -0.002 sec old)\nBuffer length: 4.927 sec\n"];
+"map" -> "nav"[label="Broadcaster: /map_nav_broadcaster\nAverage rate: 10.195 Hz\nMost recent transform: 1672107341.826 ( -0.060 sec old)\nBuffer length: 4.806 sec\n"];
+"nav" -> "base_link"[label="Broadcaster: /nav_baselink_broadcaster\nAverage rate: 85.078 Hz\nMost recent transform: 1672107341.776 ( -0.009 sec old)\nBuffer length: 4.995 sec\n"];
+"plane" -> "imu_link"[label="Broadcaster: /tf_broadcaster_imu\nAverage rate: 50.206 Hz\nMost recent transform: 1672107341.752 ( 0.014 sec old)\nBuffer length: 4.900 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1672107341.767"[ shape=plaintext ] ;
+ }->"map";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1672107341.767"[ shape=plaintext ] ;
+ }->"plane";
+}
